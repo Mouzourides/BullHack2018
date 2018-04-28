@@ -24,6 +24,7 @@
 .idea/**/libraries
 
 dist/*
+**/*.jsx
 
 # CMake
 cmake-build-debug/

@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.UUID;
+
 @Controller
-@RequestMapping(path="/bullhack2018")
-public class MainController {
+@RequestMapping(path="/bullhack2018/house")
+public class HouseController {
     @Autowired
     private HouseRepository houseRepository;
 
@@ -32,7 +34,7 @@ public class MainController {
     }
 
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<House> getAllUsers() {
+    public @ResponseBody Iterable<House> getAllHouses() {
         return houseRepository.findAll();
     }
 }

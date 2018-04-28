@@ -1,16 +1,16 @@
 import {createAction, getReturnOfExpression, getType} from 'typesafe-actions';
 import {RootAction} from "../redux/Actions";
 
-export interface AppState {
+export interface HomeState {
     name: string;
 }
 
-const initState: AppState = {
+const initState: HomeState = {
     name: 'Sam',
 };
 
 // // internal actions to track the loading of reference data
-export const AppActions = {
+export const HomeActions = {
     updateName: createAction('UPDATE_NAME',
         (value: string) => ({
             payload: value,
@@ -20,13 +20,12 @@ export const AppActions = {
 };
 
 const returnOfNavigationActions =
-    Object.values({...AppActions}).map(getReturnOfExpression);
-export type navigationAction = typeof returnOfNavigationActions[number];
+    Object.values({...HomeActions}).map(getReturnOfExpression);
+export type HomeActions = typeof returnOfNavigationActions[number];
 
-export function AppReducer(state: AppState = initState, action: RootAction): AppState {
-
+export function HomeReducer(state: HomeState = initState, action: RootAction): HomeState {
     switch (action.type) {
-        case getType(AppActions.updateName): {
+        case getType(HomeActions.updateName): {
             return {
                 ...state,
                 name: action.payload,

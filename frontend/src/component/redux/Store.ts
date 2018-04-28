@@ -3,7 +3,7 @@ import {RootAction} from './Actions';
 
 import {rootReducer} from './Reducers';
 import thunkMiddleware from 'redux-thunk';
-import {GlobalState} from "./AppState";
+import {GlobalState} from "./GlobalState";
 import createHashHistory from "history/createHashHistory";
 import {routerMiddleware} from "react-router-redux";
 import {createLogger} from 'redux-logger';

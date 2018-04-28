@@ -1,0 +1,1 @@
+{"version":3,"file":"Reducers.js","sourceRoot":"","sources":["../../src/redux/Reducers.ts"],"names":[],"mappings":";;AAAA,iCAAsC;AACtC,6GAAwG;AACxG,2FAAsF;AAGzE,QAAA,WAAW,GAAG,uBAAe,CAAe;IACrD,cAAc,EAAE,uDAA0B;IAC1C,QAAQ,EAAE,2CAAoB;CACjC,CAAC,CAAC"}

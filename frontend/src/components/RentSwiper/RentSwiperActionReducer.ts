@@ -1,5 +1,8 @@
+import {Store} from 'redux';
 import {createAction, getReturnOfExpression, getType} from 'typesafe-actions';
 import {RootAction} from '../../redux/Actions';
+import {AppState} from '../../redux/AppState';
+import {getHouseData} from '../../services/QuizApi';
 
 export interface RentData {
     _loading: boolean;
@@ -23,12 +26,16 @@ const initState: RentData = {
     houses: [],
 };
 
-// internal actions to track the loading of reference data
 export const RentActions = {
+    getHouseData: createAction('GET_HOUSE_DATA',
+        (refData: House[]) => ({
+            payload: refData,
+            type: 'GET_HOUSE_DATA',
+        }),
+    ),
     updateCurrentIndex: createAction('UPDATE_INDEX'),
 };
 
-// // // Guff to make the typed actions work
 const returnOfCreateQuizActions =
     Object.values({...RentActions}).map(getReturnOfExpression);
 export type RentAction = typeof returnOfCreateQuizActions[number];
@@ -43,7 +50,18 @@ export function RentReducer(state: RentData = initState, action: RootAction): Re
             };
         }
 
+        case getType(RentActions.getHouseData): {
+            return {
+                ...state,
+                houses: action.payload,
+            };
+        }
+
         default:
             return state;
     }
 }
+
+export const loadReferenceData = (st: Store<AppState>) => {
+    getHouseData().then((refData) => st.dispatch(RentActions.getHouseData(refData)));
+};

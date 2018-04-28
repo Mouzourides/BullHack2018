@@ -25,6 +25,7 @@
 
 dist/*
 **/*.jsx
+frontend/src/**/*.js
 
 # CMake
 cmake-build-debug/

@@ -1,6 +1,8 @@
 
 # Created by https://www.gitignore.io/api/vim,java,node,macos,linux,reactnative,intellij+all
 
+/frontend/dist/*
+
 ### Intellij+all ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
@@ -463,14 +465,21 @@ fabric.properties
 # Crashlytics plugin (for Android Studio and IntelliJ)
 
 ### Intellij+iml Patch ###
-# Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
-
 *.iml
 modules.xml
 .idea/misc.xml
 *.ipr
 
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
 
-# End of https://www.gitignore.io/api/intellij,intellij+iml
-
-# End of https://www.gitignore.io/api/vim,java,node,macos,linux,reactnative,intellij+all
+# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
+!/.mvn/wrapper/maven-wrapper.jar

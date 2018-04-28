@@ -23,6 +23,8 @@
 .idea/**/gradle.xml
 .idea/**/libraries
 
+dist/*
+
 # CMake
 cmake-build-debug/
 

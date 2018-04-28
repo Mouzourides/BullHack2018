@@ -15,6 +15,7 @@ const Questionnaire: React.SFC<Props> = (props) => {
 
     return <>
         <div>
+            {rentData.houses.map()}
         </div>
     </>;
 };

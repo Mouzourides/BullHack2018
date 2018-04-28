@@ -15,7 +15,7 @@ const Questionnaire: React.SFC<Props> = (props) => {
 
     return <>
         <div>
-            {rentData.houses.map()}
+            {rentData.currentIndex}
         </div>
     </>;
 };

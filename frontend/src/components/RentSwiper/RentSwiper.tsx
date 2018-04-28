@@ -1,21 +1,32 @@
+import Card from 'antd/es/card';
 import * as React from 'react';
 import {connect, Dispatch} from 'react-redux';
+import Button from 'reactstrap/lib/Button';
 import {AppState} from '../../redux/AppState';
 import {RentActions, RentData} from './RentSwiperActionReducer';
 
 export interface Props {
     rentData: RentData;
-    updateCurrentIndex: () => any;
+    updateCurrentHouse: () => any;
 }
 
 const Questionnaire: React.SFC<Props> = (props) => {
     const {
         rentData,
+        updateCurrentHouse,
     } = props;
 
     return <>
         <div>
-            {rentData.currentIndex}
+            <Card>
+                <p>{rentData.currentHouse.address}</p>
+                <p>{rentData.currentHouse.description}</p>
+                <p>{rentData.currentHouse.photo}</p>
+                <p>£{rentData.currentHouse.price}</p>
+            </Card>
+            <Button onClick={() => updateCurrentHouse()}>
+                Next
+            </Button>
         </div>
     </>;
 };
@@ -28,7 +39,10 @@ function mapStateToProps(state: AppState) {
 
 function mapDispatchToProps(dispatch: Dispatch<AppState>) {
     return {
-        updateCurrentIndex: () => dispatch(RentActions.updateCurrentIndex()),
+        updateCurrentHouse: () => {
+            dispatch(RentActions.updateCurrentIndex());
+            dispatch(RentActions.updateCurrentHouse());
+        },
     };
 }
 

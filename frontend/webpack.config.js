@@ -22,12 +22,7 @@ module.exports = {
             hash: false,
         },
         proxy: {
-            "/quiz": {
-                target: 'http://localhost:8080',
-                secure: false,
-                changeOrigin: true
-            },
-            "/add": {
+            "/bullhack2018/house/all": {
                 target: 'http://localhost:8080',
                 secure: false,
                 changeOrigin: true

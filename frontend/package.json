@@ -1,16 +1,16 @@
 {
-  "name": "uquiz",
+  "name": "BullHack2018",
   "version": "1.0.0",
-  "description": "quiz app",
+  "description": "BullHack2018 web app",
   "main": "index.js",
   "scripts": {
     "start:dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
-    "url": "github.com/Mouzourides/uquiz"
+    "url": "github.com/Mouzourides/BullHack2018"
   },
-  "author": "Nikolas Mouzourides",
+  "author": "Nikolas Mouzourides and Sam Warner",
   "license": "MIT",
   "devDependencies": {
     "awesome-typescript-loader": "^3.4.1",

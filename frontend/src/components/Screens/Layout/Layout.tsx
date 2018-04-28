@@ -94,7 +94,7 @@ const QuizLayout: React.SFC<Props> = (props) => {
                 <Content style={{margin: '0 90px'}}>
                     <Breadcrumb style={{margin: '16px 0'}}>
                         <Breadcrumb.Item>Home</Breadcrumb.Item>
-                        <Breadcrumb.Item>Quiz</Breadcrumb.Item>
+                        <Breadcrumb.Item>Rent</Breadcrumb.Item>
                     </Breadcrumb>
                     <div className='layout-container'>
                         <Container>

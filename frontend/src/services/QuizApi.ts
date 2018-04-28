@@ -12,11 +12,11 @@ export function getHouseData(): Promise<House[]> {
 }
 
 // const xhr = new XMLHttpRequest();
-//
-// export function getHouses() {
+
+// export function getHouses(): House[] {
 //     xhr.open('GET', 'http://localhost:8080/add', true);
 //     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-//     xhr.send(data);
+//     return xhr.send();
 // }
 
 // export function login(username: string, password: string) {

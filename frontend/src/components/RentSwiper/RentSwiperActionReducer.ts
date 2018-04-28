@@ -8,6 +8,7 @@ export interface RentData {
     _loading: boolean;
     currentIndex: number;
     houses: House[];
+    currentHouse: House;
 }
 
 export interface House {
@@ -21,18 +22,30 @@ export interface House {
 }
 
 const initState: RentData = {
-    _loading: false,
-    currentIndex: 0,
-    houses: [],
-};
+        _loading: false,
+        currentHouse: {
+            address: '',
+            description: '',
+            id: 0,
+            lat: 0,
+            long: 0,
+            photo: '',
+            price: 0,
+        },
+        currentIndex: 0,
+        houses: [],
+    }
+;
 
 export const RentActions = {
-    getHouseData: createAction('GET_HOUSE_DATA',
+    refDataLoaded: createAction('REFERENCE_DATA_LOADED',
         (refData: House[]) => ({
             payload: refData,
-            type: 'GET_HOUSE_DATA',
+            type: 'REFERENCE_DATA_LOADED',
         }),
     ),
+    refDataLoading: createAction('REFERENCE_DATA_LOADING'),
+    updateCurrentHouse: createAction('UPDATE_CURRENT_HOUSE'),
     updateCurrentIndex: createAction('UPDATE_INDEX'),
 };
 
@@ -46,13 +59,28 @@ export function RentReducer(state: RentData = initState, action: RootAction): Re
         case getType(RentActions.updateCurrentIndex): {
             return {
                 ...state,
-                currentIndex: state.currentIndex++,
+                currentIndex: state.houses.length - 1 > state.currentIndex ?
+                    state.currentIndex + 1 : state.currentIndex,
             };
         }
 
-        case getType(RentActions.getHouseData): {
+        case getType(RentActions.updateCurrentHouse): {
             return {
                 ...state,
+                currentHouse: state.houses[state.currentIndex],
+            };
+        }
+
+        case getType(RentActions.refDataLoading): {
+            return {
+                ...state,
+                _loading: true,
+            };
+        }
+        case getType(RentActions.refDataLoaded): {
+            return {
+                ...state,
+                _loading: false,
                 houses: action.payload,
             };
         }
@@ -63,5 +91,9 @@ export function RentReducer(state: RentData = initState, action: RootAction): Re
 }
 
 export const loadReferenceData = (st: Store<AppState>) => {
-    getHouseData().then((refData) => st.dispatch(RentActions.getHouseData(refData)));
+    st.dispatch(RentActions.refDataLoading());
+    getHouseData().then((refData) => {
+        st.dispatch(RentActions.refDataLoaded(refData));
+        st.dispatch(RentActions.updateCurrentHouse());
+    });
 };

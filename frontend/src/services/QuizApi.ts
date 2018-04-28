@@ -23,7 +23,7 @@
 //     // login
 // }
 //
-// export function submitQuiz(createQuizData: HomeData) {
+// export function submitQuiz(createQuizData: RentData) {
 //     xhr.open('POST', 'http://localhost:8080/add-quiz', true);
 //     xhr.setRequestHeader('Content-type', 'application/json');
 //     xhr.send(createQuizData);

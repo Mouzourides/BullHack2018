@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
-import {HomeReducer} from '../components/Home/HomeActionReducer';
+import {RentReducer} from '../components/RentSwiper/RentSwiperActionReducer';
 import {NavigationReducer} from '../components/Screens/Layout/LayoutActionReducer';
 import {AppState} from './AppState';
 
 export const rootReducer = combineReducers<AppState>({
-    homeData: HomeReducer,
     navData: NavigationReducer,
+    rentData: RentReducer,
 });

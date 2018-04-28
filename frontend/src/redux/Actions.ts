@@ -1,4 +1,4 @@
-import {HomeActions} from '../components/Home/HomeActionReducer';
+import {RentAction} from '../components/RentSwiper/RentSwiperActionReducer';
 import {navigationAction} from '../components/Screens/Layout/LayoutActionReducer';
 
-export type RootAction = | HomeActions | navigationAction;
+export type RootAction = | RentAction | navigationAction;

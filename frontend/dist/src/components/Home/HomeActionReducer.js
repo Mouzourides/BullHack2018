@@ -30,4 +30,4 @@ export function HomeReducer(state, action) {
             return state;
     }
 }
-//# sourceMappingURL=HomeActionReducer.js.map
+//# sourceMappingURL=RentSwiperActionReducer.js.map

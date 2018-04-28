@@ -8,7 +8,7 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
     return t;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var CreateQuestionnaireActions_1 = require("./HomeActions");
+var CreateQuestionnaireActions_1 = require("./RentActions");
 var typesafe_actions_1 = require("typesafe-actions");
 var QuizApi_1 = require("../../services/QuizApi");
 var initState = {

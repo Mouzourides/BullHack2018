@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_redux_1 = require("react-redux");
-var CreateQuestionnaireActions_1 = require("./HomeActions");
+var CreateQuestionnaireActions_1 = require("./RentActions");
 var button_1 = require("antd/lib/button");
 var antd_1 = require("antd");
 var group_1 = require("antd/lib/radio/group");

@@ -14,5 +14,5 @@ ReactDOM.render(
         <Routes/>
     </Provider>,
 
-    document.getElementById('quiz'),
+    document.getElementById('root'),
 );

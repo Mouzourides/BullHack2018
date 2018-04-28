@@ -34,4 +34,4 @@ exports.CreateQuestionnaireActions = {
 };
 // // // Guff to make the typed actions work
 const returnOfCreateQuizActions = Object.values(Object.assign({}, exports.CreateQuestionnaireActions)).map(typesafe_actions_1.getReturnOfExpression);
-//# sourceMappingURL=HomeActions.js.map
+//# sourceMappingURL=RentActions.js.map

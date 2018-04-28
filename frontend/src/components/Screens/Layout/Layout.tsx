@@ -89,7 +89,7 @@ const QuizLayout: React.SFC<Props> = (props) => {
             </Sider>
             <Layout>
                 <Header>
-                    <h1 className='nav-text'><i>BullHack 2018</i></h1>
+                    <h1 className='nav-text'><i>rentr</i></h1>
                 </Header>
                 <Content style={{margin: '0 90px'}}>
                     <Breadcrumb style={{margin: '16px 0'}}>
@@ -103,7 +103,7 @@ const QuizLayout: React.SFC<Props> = (props) => {
                     </div>
                 </Content>
                 <Footer style={{textAlign: 'center'}}>
-                    BullHack 2018 - Nik & Sam
+                    BullHack 2018 - Nik and Sam
                 </Footer>
             </Layout>
         </Layout>

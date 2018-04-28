@@ -1,33 +1,33 @@
 import * as React from 'react';
 import {connect, Dispatch} from 'react-redux';
 import {AppState} from '../../redux/AppState';
-import {HomeActions, HomeData} from './HomeActionReducer';
+import {RentActions, RentData} from './RentSwiperActionReducer';
 
 export interface Props {
-    homeData: HomeData;
+    rentData: RentData;
+    updateCurrentIndex: () => any;
 }
 
 const Questionnaire: React.SFC<Props> = (props) => {
     const {
-        homeData,
+        rentData,
     } = props;
 
     return <>
         <div>
-            <p>My name is: {homeData.name}</p>
         </div>
     </>;
 };
 
 function mapStateToProps(state: AppState) {
     return {
-        homeData: state.homeData,
+        rentData: state.rentData,
     };
 }
 
 function mapDispatchToProps(dispatch: Dispatch<AppState>) {
     return {
-        addAnswer: (value: number) => dispatch(HomeActions.updateName(value)),
+        updateCurrentIndex: () => dispatch(RentActions.updateCurrentIndex()),
     };
 }
 

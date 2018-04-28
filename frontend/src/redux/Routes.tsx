@@ -6,7 +6,7 @@ import {Route} from 'react-router';
 
 import * as Loader from 'react-loader';
 import {connect} from 'react-redux';
-import HomeScreen from '../components/Screens/HomeScreen/HomeScreen';
+import HomeScreen from '../components/Screens/RentSwiperScreen/RentSwiperScreen';
 import {AppState} from './AppState';
 import {history} from './Store';
 
@@ -30,7 +30,7 @@ const Routes: React.SFC<Props> = (props) => {
 
 function mapStateToProps(state: AppState) {
     return {
-        loading: state.homeData._loading,
+        loading: state.rentData._loading,
     };
 }
 

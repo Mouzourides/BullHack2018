@@ -1,7 +1,7 @@
-import {HomeData} from '../components/Home/HomeActionReducer';
+import {RentData} from '../components/RentSwiper/RentSwiperActionReducer';
 import {NavigationState} from '../components/Screens/Layout/LayoutActionReducer';
 
 export interface AppState {
-    readonly homeData: HomeData;
+    readonly rentData: RentData;
     readonly navData: NavigationState;
 }

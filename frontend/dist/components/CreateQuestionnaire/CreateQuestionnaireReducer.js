@@ -67,4 +67,4 @@ function CreateQuestionnaireReducer(state = initState, action) {
     }
 }
 exports.CreateQuestionnaireReducer = CreateQuestionnaireReducer;
-//# sourceMappingURL=HomeActionReducer.js.map
+//# sourceMappingURL=RentSwiperActionReducer.js.map

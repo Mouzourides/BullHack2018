@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import { HomeReducer } from '../components/Home/HomeActionReducer';
+import { RentReducer } from '../components/RentSwiper/RentSwiperActionReducer';
+import { NavigationReducer } from '../components/Screens/Layout/LayoutActionReducer';
 export var rootReducer = combineReducers({
-    homeData: HomeReducer,
+    homeData: RentReducer,
+    navData: NavigationReducer,
 });
 //# sourceMappingURL=Reducers.js.map

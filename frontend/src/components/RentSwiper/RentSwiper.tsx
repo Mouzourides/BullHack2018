@@ -28,7 +28,7 @@ const Questionnaire: React.SFC<Props> = (props) => {
                 <h2 className='center'>£{rentData.currentHouse.price}</h2>
             </Card>
             <Button
-                className='button submit-button long-button'
+                className='button add-button long-button'
                 onClick={() => updateCurrentHouse()}>
                 Like
             </Button>

@@ -30,12 +30,12 @@ const Questionnaire: React.SFC<Props> = (props) => {
             <Button
                 className='button submit-button long-button'
                 onClick={() => updateCurrentHouse()}>
-                Interested
+                Like
             </Button>
             <Button
                 className='button remove-button long-button'
                 onClick={() => updateCurrentHouse()}>
-                Not Interested
+                Dislike
             </Button>
         </div>
     </>;

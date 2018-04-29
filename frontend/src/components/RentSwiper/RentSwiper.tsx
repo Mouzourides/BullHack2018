@@ -18,14 +18,24 @@ const Questionnaire: React.SFC<Props> = (props) => {
 
     return <>
         <div>
+            <h1>View houses</h1>
             <Card>
-                <p>{rentData.currentHouse.address}</p>
-                <p>{rentData.currentHouse.description}</p>
-                <p>{rentData.currentHouse.photo}</p>
-                <p>£{rentData.currentHouse.price}</p>
+                <h2 className='center'>{rentData.currentHouse.address}</h2>
+                <h5 className='center'>{rentData.currentHouse.description}</h5>
+                <img className='img'
+                     src={rentData.currentHouse.photo}
+                height='500' width='500' alt='there should be a house here'/>
+                <h2 className='center'>£{rentData.currentHouse.price}</h2>
             </Card>
-            <Button onClick={() => updateCurrentHouse()}>
-                Next
+            <Button
+                className='button submit-button long-button'
+                onClick={() => updateCurrentHouse()}>
+                Interested
+            </Button>
+            <Button
+                className='button remove-button long-button'
+                onClick={() => updateCurrentHouse()}>
+                Not Interested
             </Button>
         </div>
     </>;

@@ -34,7 +34,7 @@ export class SubmitHouse extends React.Component<{}, State> {
 
         return (
             <>
-                <h1>Sign up your property!</h1>
+                <h1>Sign up your property</h1>
                 <div className='box'>
                     <h3>Address: </h3>
                     <input type={'text'}

@@ -24,6 +24,7 @@ const Routes: React.SFC<Props> = (props) => {
                 <>
                     <Route path='/view-houses' component={HomeScreen}/>
                     <Route path='/add-house' component={SubmitHouseScreen}/>
+                    <Route path='/view-matches' component={SubmitHouseScreen}/>
                 </>
             </ConnectedRouter>
         </Loader>

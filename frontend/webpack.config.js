@@ -26,6 +26,21 @@ module.exports = {
                 target: 'http://localhost:8080',
                 secure: false,
                 changeOrigin: true
+            },
+            "/bullhack2018/house/add": {
+                target: 'http://localhost:8080',
+                secure: false,
+                changeOrigin: true
+            },
+            "/bullhack2018/swiper/all": {
+                target: 'http://localhost:8080',
+                secure: false,
+                changeOrigin: true
+            },
+            "/bullhack2018/swiper/add": {
+                target: 'http://localhost:8080',
+                secure: false,
+                changeOrigin: true
             }
         }
 

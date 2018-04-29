@@ -7,6 +7,7 @@ import {Route} from 'react-router';
 import * as Loader from 'react-loader';
 import {connect} from 'react-redux';
 import HomeScreen from '../components/Screens/RentSwiperScreen/RentSwiperScreen';
+import SubmitHouseScreen from '../components/Screens/SubmitHouseScreen/SubmitHouseScreen';
 import {AppState} from './AppState';
 import {history} from './Store';
 
@@ -21,7 +22,8 @@ const Routes: React.SFC<Props> = (props) => {
         <Loader loaded={!loading}>
             <ConnectedRouter history={history}>
                 <>
-                    <Route path='/' component={HomeScreen}/>
+                    <Route path='/view-houses' component={HomeScreen}/>
+                    <Route path='/add-house' component={SubmitHouseScreen}/>
                 </>
             </ConnectedRouter>
         </Loader>

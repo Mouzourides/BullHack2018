@@ -15,7 +15,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping(path="/add")
+    @RequestMapping("/add")
     public @ResponseBody String addNewUser (@RequestParam String name,
                                              @RequestParam String email,
                                              @RequestParam String password) {

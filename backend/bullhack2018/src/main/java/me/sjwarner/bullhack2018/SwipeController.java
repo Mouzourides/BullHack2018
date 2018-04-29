@@ -15,7 +15,7 @@ public class SwipeController {
     @Autowired
     private SwipeRepository swipeRepository;
 
-    @GetMapping(path="/add")
+    @RequestMapping("/add")
     public @ResponseBody String addNewSwipe (@RequestParam UUID userId,
                                              @RequestParam UUID houseId,
                                              @RequestParam boolean match) {

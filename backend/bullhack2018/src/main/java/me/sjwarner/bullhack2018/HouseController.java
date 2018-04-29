@@ -15,7 +15,7 @@ public class HouseController {
     @Autowired
     private HouseRepository houseRepository;
 
-    @GetMapping(path="/add")
+    @RequestMapping("/add")
     public @ResponseBody String addNewHouse (@RequestParam String address,
                                              @RequestParam String photo,
                                              @RequestParam String description,

@@ -39,7 +39,10 @@ const QuizLayout: React.SFC<Props> = (props) => {
         updateCurrentPageIndex(key);
         switch (key) {
             case'1':
-                store.dispatch(replace('/home'));
+                store.dispatch(replace('/view-houses'));
+                break;
+            case'2':
+                store.dispatch(replace('/add-house'));
                 break;
         }
     }
@@ -65,7 +68,7 @@ const QuizLayout: React.SFC<Props> = (props) => {
                     </Menu.Item>
                     <Menu.Item key='2'>
                         <Icon type='desktop'/>
-                        <span>Create Account</span>
+                        <span>Add House</span>
                     </Menu.Item>
                     <Menu.Item key='4'>
                         <Icon type='inbox'/>

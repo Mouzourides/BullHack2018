@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
 import java.util.UUID;
 
 @Controller
@@ -31,6 +32,13 @@ public class HouseController {
 
         houseRepository.save(house);
         return "Saved";
+    }
+
+
+    @GetMapping(path="/nice-house")
+    public @ResponseBody
+    List<House> getNiceHouse() {
+        return houseRepository.getNiceHouse();
     }
 
     @GetMapping(path="/all")

@@ -16,7 +16,9 @@ public class Swipe implements Serializable {
     private UUID houseId;
     private boolean match;
 
-    protected Swipe() {}
+    public Swipe() {
+        // for JPA
+    }
 
     public Swipe(UUID userId, UUID houseId, boolean match) {
         this.userId = userId;

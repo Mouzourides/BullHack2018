@@ -1,6 +1,8 @@
 package me.sjwarner.bullhack2018;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface SwipeRepository extends CrudRepository<Swipe, Long> {
+import java.util.UUID;
+
+public interface SwipeRepository extends JpaRepository<Swipe, UUID> {
 }

@@ -19,7 +19,9 @@ public class House implements Serializable {
     private double longitude;
     private double price;
 
-    protected House() {}
+    public House() {
+        //for JPA
+    }
 
     public House(String address, String photo, String description, double latitude, double longitude, double price) {
         this.address = address;

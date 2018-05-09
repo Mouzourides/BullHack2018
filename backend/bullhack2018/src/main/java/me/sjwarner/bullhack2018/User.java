@@ -16,7 +16,9 @@ public class User implements Serializable {
     private String email;
     private String password;
 
-    protected User() {}
+    public User() {
+        // for JPA
+    }
 
     public User(String name, String email, String password) {
         this.name = name;
